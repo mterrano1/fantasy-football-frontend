@@ -37,17 +37,6 @@ const Players = () => {
                     </li>
                 ))}
             </ul>
-            {/* <ul className='playerCards1'>
-                {players.map(player => (
-                    <li className='playerCard1' key={player.id}>
-                        <Link to={`/players/${player.id}`}>
-                            <img className='playersImg' src={player.img} />
-                            <h4>{player.name}</h4>
-                            <h5>{player.position.position}</h5>
-                        </Link>
-                    </li>
-                ))}
-            </ul> */}
         </div>
     );
 }
