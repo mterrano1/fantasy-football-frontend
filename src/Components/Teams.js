@@ -4,21 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Teams = () => {
     const { teams, players } = useContext(MyContext);
-    const [points, setPoints] = useState([]);
-    let x = 1;
-
-    const simulatePoints = () => {
-        const pointsArray = [...points];
-        //generate random points between 0 and 30 for each player
-        const playerTest = players.map(player => (
-            Math.floor(Math.random() * 30)
-        ));
-        //add newly simulated points to existing simulated points
-        const sumArray = playerTest.map((points, index) => (
-            points + pointsArray[index]
-        ));
-        points.length != 0 ? setPoints(sumArray) : setPoints(playerTest)
-    }
+    // const [points, setPoints] = useState([]);
+    // let x = 1;
 
     // const simulatePoints = () => {
     //     const pointsArray = [...points];
@@ -32,21 +19,26 @@ const Teams = () => {
     //     ));
     //     points.length != 0 ? setPoints(sumArray) : setPoints(playerTest)
     // }
+
     
+    // const playerPoints = players.map((player, index) => {
+    //     const pointsArray = [...points];
+    //     console.log(`${player.name}: ${pointsArray[index]}`)
+    // })
 
     return (
         <div>
             <hr/>
-            <h1>Standings</h1>
-                <button onClick={simulatePoints}>Simulate</button>
+            <h1>Fantasy League</h1>
+                {/* <button onClick={simulatePoints}>Simulate</button> */}
                 <ol className='teamOL'>
                     {teams.map((team) => (
                         <li key={team.id} className='teamsLI'>
-                            Rank: {x++}
+                            {/* Rank: {x++} */}
                             <Link to={`/teams/${team.id}`}>
                                 <h4>{team.name}</h4>
                             </Link>
-                            Total Points: 
+                            {/* Total Points:  */}
                         </li>
                     ))}
                 </ol>
