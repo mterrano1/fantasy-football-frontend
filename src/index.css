@@ -7,7 +7,157 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  cursor: pointer;
+}
+
+.teamImg {
+  height: 10%;
+  width: 10%;
+}
+
+.playersImg {
+  height: 50%;
+  width: 50%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.playerCards1 {
+  list-style: none;
+}
+
+.playerCard1 {
+  margin: 1rem;
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 3px solid black;
+  width: 300px;
+  background: #ccc;
+}
+
+@media (min-width: 768px) {
+  .playerCards1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .playerCard1 {
+    width: calc(20% - 2rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .playerCard1 {
+    width: calc(20% - 2rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .playerCard1 {
+    width: calc(20% - 2rem);
+  }
+}
+
+.form {
+  margin: 1rem;
+  box-shadow: 2 0 7px 0 #ddd;
+  border-radius: 25px;
+  border: 3px solid black;
+  width: 25%;
+  background: #ccc;
+  padding: 25px;
+  text-align: left;
+}
+
+input {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 75%;
+  margin: 10px 5px 10px 2px;
+}
+
+select {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 40%;
+  margin: 10px 5px 10px 2px;
+}
+
+.teamOL {
+    /* list-style: none; */
+    margin: 5% 25%;
+}
+
+.playerContainer {
+  list-style: none;
+  margin: 5% 33%;
+}
+
+.playersContainer {
+  list-style: none;
+  margin: 5% 20%;
+}
+
+.teamsLI {
+  margin: 1rem;
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 3px solid black;
+  width: 900px;
+  background: #ccc;
+  padding: 5px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.teamPlayersLI {
+  margin: 1rem;
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 3px solid black;
+  width: 900px;
+  background: #ccc;
+  padding: 5px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.playerCard {
+  margin: 1rem;
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 3px solid black;
+  width: 400px;
+  background: #ccc;
+  padding: 5px;
+  text-align: center;
+}
+
+.playersCard {
+  margin: 1rem;
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 3px solid black;
+  width: 400px;
+  background: #ccc;
+  padding: 5px;
+  text-align: center;
+}
+
+.teamContainers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* @media (min-width: 768px) {
+  .challengeUL {
+    display: flex;
+    flex-wrap: wrap;
+  } */
