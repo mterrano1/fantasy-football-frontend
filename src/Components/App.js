@@ -9,7 +9,7 @@ import Teams from './Teams';
 import Team from './Team';
 import '../App.css';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <NavBar />
