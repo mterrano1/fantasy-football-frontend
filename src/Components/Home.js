@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-function Home() {
+const Home = () => {
     return (
         <div>
             <hr/>
-            <h1>Home Page</h1>
+            <h1>Fantasy Football</h1>
+            <h4>Welcome to my fantasy football app!</h4>
         </div>
     );
 }
 
 export default Home;
+
