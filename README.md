@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Phase-3-Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+------------
 
-## Available Scripts
+Welcome to my third Flatiron School project! This is the frontend for my Fantasy Football App. Here is the link to the backend portion of this project : https://github.com/mterrano1/fantasy-football-backend
 
-In the project directory, you can run:
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Use Active Record to interact with a database.
+- Have at least two models with a one-to-many relationship.
+- At a minimum, set up the following API routes in Sinatra:
+  - create and read actions for both models
+  - full CRUD capability for one of the models
+- Build a separate React frontend application that interacts with the API to
+  perform CRUD actions.
+- Use good OO design patterns. You should have separate classes for each of your
+  models, and create instance and class methods as necessary.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+For example, build a todo list application with a React frontend interface and a
+Sinatra backend API, where a user can:
 
-### `npm test`
+- **Create** a new todo
+- **Read** a list of all todos
+- **Update** an individual todo
+- **Delete** a todo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A `Todo` can be tagged with a `Category`, so that each todo _belongs to_ a
+category and each category _has many_ todos.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+First, you will need to fork and clone this repository into a local directory. Once you navigate into the correct file, run:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```console
+$ npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app should open in http://localhost:3000/
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+I hope you enjoy viewing my riddle app as much as I enjoyed making it!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Description
+-----------
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- The navigation bar will allow you to switch between the home, players, add player, and teams page
+- The `'/players'` page will render all of the fantasy football players in the database. All players are sorted based on the position they play.
+  - Clicking on the button titled 'Free Agents' will display all of the players available to add to a team that don't currently belong to a fantasy team. Upon clicking, the button text will change to 'All' and clicking it again will render all of the players in the database once again.
+  - If a user clicks on the player card, they will be routed to `'/players/:id'` where they can view more information about the player.
+- The `'/players/:id'` page will give the user additional options:
+  - If the player doesn't belong to a fantasy team, the user will have the option of adding them to the team with a drop down list. Doing so will route the user to the `'/teams/:id'` page and show them on the fantasy team they just joined.
+  - If the player already belongs to a fantasy team, then the user will have the option of clicking on a button to drop them from their existing fantasy team. Doing so will route the user to the `'/teams/:id'` page of the team they were dropped from.
+  - Additionally, a user has the option of clicking on the button titled 'retire' which will delete the player from the database. Doing so will route the user to the `'/players'` page. This can be done whether the player belongs to a fantasy team or not.
+- The `'/players/new'` page allows the user to add their own player to the database.
+- The `'/teams'` page will show a list of all the fantasy teams in the league. Clicking on the team will route the user to the `'/teams/:id'` page where they will be able to see all the fantasy players belonging to that team.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## See it for yourself here!
+---------------
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://www.youtube.com/watch?v=-xuh9j95Nq4
