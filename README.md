@@ -1,4 +1,4 @@
-# Phase-3-Project
+# Fantasy FootBall Frontend Project
 
 ## Introduction
 
