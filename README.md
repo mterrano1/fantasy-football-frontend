@@ -1,7 +1,6 @@
 # Phase-3-Project
 
 ## Introduction
-------------
 
 Welcome to my third Flatiron School project! This is the frontend for my Fantasy Football App. Here is the link to the backend portion of this project : https://github.com/mterrano1/fantasy-football-backend
 
@@ -40,11 +39,7 @@ $ npm start
 The app should open in http://localhost:3000/
 
 
-I hope you enjoy viewing my riddle app as much as I enjoyed making it!
-
-
 ## Description
------------
 
 - The navigation bar will allow you to switch between the home, players, add player, and teams page
 - The `'/players'` page will render all of the fantasy football players in the database. All players are sorted based on the position they play.
