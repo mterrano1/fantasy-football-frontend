@@ -56,4 +56,4 @@ The app should open in http://localhost:3000/
 ## See it for yourself here!
 ---------------
 
-https://www.youtube.com/watch?v=-xuh9j95Nq4
+https://www.youtube.com/watch?v=EjOo1UmekxQ
