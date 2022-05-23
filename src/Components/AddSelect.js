@@ -5,7 +5,7 @@ import { MyContext } from '../Context/MyContext';
 const AddSelect = ({ player }) => {
     const { teams, handleTeamUpdate } = useContext(MyContext);
     const { id } = player;
-    const [fantasyTeam, setFantasyTeam] = useState();
+    const [fantasyTeamId, setFantasyTeamId] = useState();
     const navigate = useNavigate();
 
     //create option names and values
@@ -19,16 +19,16 @@ const AddSelect = ({ player }) => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({fantasy_team_id: parseInt(fantasyTeam)}),
+            body: JSON.stringify({fantasy_team_id: parseInt(fantasyTeamId)}),
         })
         .then(r => r.json())
         .then(data => handleTeamUpdate(data))
-        navigate(`/teams/${fantasyTeam}`)
+        navigate(`/teams/${fantasyTeamId}`)
     }
 
     return (
         <form onSubmit={handleSubmit}>
-            <select value={fantasyTeam} onChange={e => setFantasyTeam(e.target.value)}>
+            <select value={fantasyTeamId} onChange={e => setFantasyTeamId(e.target.value)}>
                 <option></option>
                 {teamOptions}
             </select>

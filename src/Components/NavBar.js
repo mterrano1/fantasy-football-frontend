@@ -8,6 +8,7 @@ const NavBar = () => {
             <NavLink exact to='/players'>Players</NavLink>
             <NavLink exact to='/players/new'>Add new player</NavLink>
             <NavLink exact to='/teams'>Teams</NavLink>
+            <NavLink exact to='/teams/new'>Add new team</NavLink>
         </nav>
     );
 }

@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 const PlayerForm = () => {
     const { players, positions, handleAddPlayer } = useContext(MyContext);
     const navigate = useNavigate();
-    const positionArray = [...positions].slice(0, -1)
     const [newPlayer, setNewPlayer] = useState({
         name: '',
         team: '',
@@ -14,8 +13,7 @@ const PlayerForm = () => {
     });
     
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const handleSubmit = () => {
         fetch('http://localhost:9292/players', {
             method: "POST",
             headers: {
@@ -34,11 +32,8 @@ const PlayerForm = () => {
         })
     }
 
-    //filter out the defense position
-    const filteredPlayers = players.filter(player => player.position_id != 6) 
-
     //remove duplicate team names
-    const uniqueTeamsArray = [... new Set(filteredPlayers.map(player => player.team))]
+    const uniqueTeamsArray = [... new Set(players.map(player => player.team))]
 
     //sort teamnames
     const sortedTeamsArray = uniqueTeamsArray.sort()
@@ -49,7 +44,7 @@ const PlayerForm = () => {
     ));
 
     //dropdown position options
-    const positionOptions = positionArray.map(position => (
+    const positionOptions = positions.map(position => (
         <option key={position.id} value={position.id}>{position.position}</option>   
     ));
 

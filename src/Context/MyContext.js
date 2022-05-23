@@ -25,6 +25,10 @@ const MyProvider = (props) => {
         setPlayers([...players, player])
     }
 
+    const handleAddTeam = (team) => {
+        setTeams([...teams, team])
+    }
+
     const handleTeamUpdate = (data) => {
         const updatedPlayerTeam = players.map(player => player.id == data.id ? data : player)
         setPlayers(updatedPlayerTeam)
@@ -41,6 +45,7 @@ const MyProvider = (props) => {
             teams: teams,
             positions: positions,
             handleAddPlayer: handleAddPlayer,
+            handleAddTeam: handleAddTeam,
             handleTeamUpdate: handleTeamUpdate,
             handleRetire: handleRetire
         }}>

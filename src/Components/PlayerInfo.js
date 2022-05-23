@@ -19,7 +19,6 @@ const PlayerInfo = ({ player }) => {
             <h1>{name}</h1>
             <h2>{position.position} - {team}</h2>
             {findTeam[0] ? <DropButton player={player} /> : <AddSelect player={player} />}<br/><br/>
-            {/* <button>Retire</button> */}
             <RetireButton player={player} />
         </div>
     );

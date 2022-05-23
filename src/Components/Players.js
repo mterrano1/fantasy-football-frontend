@@ -24,7 +24,7 @@ const Players = () => {
     return (
         <div>
             <hr/>
-            <h1>Players Page</h1>
+            <h1>Players</h1>
             <button onClick={handleClick}>{available ? 'Free Agents' : 'All'}</button>
             <ul className='playerCards1'>
                 {displayedPlayers.map(player => (

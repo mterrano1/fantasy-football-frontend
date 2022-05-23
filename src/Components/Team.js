@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { MyContext } from '../Context/MyContext';
+import { Link } from 'react-router-dom';
 import TeamPlayers from './TeamPlayers';
 
 const Team = () => {
@@ -10,6 +11,7 @@ const Team = () => {
     //filter players that belong to specific fantasy team
     const filteredPlayers = players.filter(player => player.fantasy_team_id == id)
 
+    //sort players according to position id
     const sortedPlayers = filteredPlayers.sort((a, b) => (
         a.position_id < b.position_id ? -1 : 1
     ))
@@ -25,6 +27,9 @@ const Team = () => {
         <div>
             <hr/>
             <h1>{filteredTeams[0] ? filteredTeams[0].name : 'Team Name'}</h1>
+            <Link to={'/Players'}>
+                <button>Add players</button>
+            </Link>
             <ul className='teamOL'>
                 {displayedPlayers}
             </ul>

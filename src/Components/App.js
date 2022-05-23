@@ -7,6 +7,7 @@ import Player from './Player';
 import PlayerForm from './PlayerForm';
 import Teams from './Teams';
 import Team from './Team';
+import TeamForm from './TeamForm';
 import '../App.css';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route exact path='/players/new' element={<PlayerForm />} />
           <Route exact path='/players/:id' element={<Player />} />
           <Route exact path='/teams' element={<Teams /> } />
+          <Route exact path='/teams/new' element={<TeamForm />} />
           <Route exact path='/teams/:id' element={<Team /> } />
         </Routes>
       </div>
